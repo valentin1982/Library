@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Facelet Title</title>
+</h:head>
+
+<h:body>
+    <ui:composition>
+        <div class="left-menu">
+            <h:form styleClass="genres" id="genresForm">
+                <h3 style="margin-top:0"></h3>
+                <ul>
+                    <li>
+                        <p:commandButton value="#{msg.all_genres}" action="searchAll" actionListener="#{libraryFacade.searchAllBooks()}" styleClass="noborder-button-genre">
+                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                        </p:commandButton>
+                    </li>
+                </ul>
+                <p:accordionPanel activeIndex="null">
+                    <p:tab >
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/java.jpg" />
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10">
+                            <!-- раздел Java-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(35)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(31)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(23)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(25)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(28)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(38)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(46)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(51)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/php.jpg"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10">
+                            <!-- Раздел PHP-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(43)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(49)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/net.jpg"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел .NET-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(33)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/data_base.jpg" alt="Data Base"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел СУБД-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(34)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(45)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(57)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/mobile.jpg" alt="Mobile"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел Mobile-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(27)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(37)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/web.jpg" alt="WEB"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел WEB-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(32)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(47)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(36)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(50)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(42)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(55)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/computer_science.jpg" alt="Computer Science"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел Computer Science-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(26)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/regex.jpg" alt="RegEx	"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел RegExp	-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(30)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/umltm.jpg" alt="UML"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел UML-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(41)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/security1.jpg" alt="Security"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел Security-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(44)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/operating.jpg" alt="Операцыонки"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел Операционные Системы-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(39)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(52)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(53)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(54)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/network_solutions.jpg" alt="Сетевое администрирование"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел Сетевое администрирование-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(56)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                </p:accordionPanel>
+            </h:form>
+        </div>
+    </ui:composition>
+</h:body>
+</html>
+

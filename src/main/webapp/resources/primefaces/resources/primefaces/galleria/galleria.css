@@ -1,0 +1,74 @@
+.ui-galleria
+{
+    overflow: hidden;
+    position: relative;
+    visibility: hidden;
+}
+.ui-galleria-panel-wrapper
+{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+.ui-galleria-panel
+{
+    filter: inherit;
+    left: 0px;
+    list-style-type: none;
+    position: absolute;
+    top: 0px;
+}
+.ui-galleria-filmstrip-wrapper
+{
+    margin: 5px auto;
+    overflow: hidden;
+    position: relative;
+}
+.ui-galleria-filmstrip
+{
+    left: 0px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    width: 2340px;
+    z-index: 900;
+}
+.ui-galleria-frame
+{
+    cursor: pointer;
+    float: left;
+    margin-right: 5px;
+    opacity: 0.3;
+}
+.ui-galleria-frame-active
+{
+    opacity: 1;
+}
+.ui-galleria-frame-content
+{
+    overflow: hidden;
+}
+.ui-galleria-nav-next, .ui-galleria-nav-prev
+{
+    cursor: pointer;
+    position: absolute;
+}
+.ui-galleria-nav-prev
+{
+    left: 5px;
+}
+.ui-galleria-nav-next
+{
+    right: 5px;
+}
+.ui-galleria-caption
+{
+    background-color: rgba(0,0,0,0.5);
+    color: #FFFFFF;
+    display: none;
+    left: 1px;
+    padding: 0.2em 1em;
+    position: absolute;
+}
