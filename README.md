@@ -10,4 +10,4 @@ Using technologies:
     
     JSF, AJAX, PrimeFaces, Facelets, Hibernate, 
     SQL, OmniFaces, J2EE Security, HTML, CSS, Spring MVC,
-    Spring security
+    Spring security, XHTML.
