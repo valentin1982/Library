@@ -6,7 +6,7 @@ username: user
 
 password: user12345888
 
-Using technologies: 
+Used technologies: 
     
     JSF, AJAX, PrimeFaces, Facelets, Hibernate, 
     SQL, OmniFaces, J2EE Security, HTML, CSS, Spring MVC,
