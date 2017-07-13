@@ -17,17 +17,26 @@ public class BooksREST {
     @Autowired
     private BookDAO bookDAO;
 
-    @RequestMapping(value = "/books/all", method = RequestMethod.GET, headers = "Accept=application/json")
+    @RequestMapping(
+            value = "/books/all",
+            method = RequestMethod.GET,
+            headers = "Accept=application/json")
     public List<Book> getAll() {
         return bookDAO.getBooks();
     }
 
-    @RequestMapping(value = "/books/name/{name}", method = RequestMethod.GET, headers = "Accept=application/json")
+    @RequestMapping(
+            value = "/books/name/{name}",
+            method = RequestMethod.GET,
+            headers = "Accept=application/json")
     public List<Book> getBooksByName(@PathVariable("name") String name) {
         return bookDAO.getBooks(name);
     }
 
-    @RequestMapping(value = "/books/author/{name}", method = RequestMethod.GET, headers = "Accept=application/json")
+    @RequestMapping(
+            value = "/books/author/{name}",
+            method = RequestMethod.GET,
+            headers = "Accept=application/json")
     public List<Book> getBooksByAuthor(@PathVariable("name") String name) {
         return bookDAO.getBooks(new Author(name));
     }

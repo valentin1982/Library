@@ -28,13 +28,17 @@ public class ShowImage extends HttpServlet {
      * @throws javax.servlet.ServletException if a servlet-specific error occurs
      * @throws java.io.IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(
+            HttpServletRequest request,
+            HttpServletResponse response
+    )
             throws ServletException, IOException {
         response.setContentType("image/jpeg");
         OutputStream out = response.getOutputStream();
         try {
             int index = Integer.valueOf(request.getParameter("index"));
-            LibraryFacade libraryFacade = (LibraryFacade) getServletContext().getAttribute("libraryFacade");
+            LibraryFacade libraryFacade = (LibraryFacade) getServletContext()
+                    .getAttribute("libraryFacade");
             byte[] image = libraryFacade.getBooks().get(index).getImage();
             response.setContentLength(image.length);
             out.write(image);
@@ -46,7 +50,7 @@ public class ShowImage extends HttpServlet {
     }
 
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP
      * <code>GET</code> method.
@@ -57,7 +61,10 @@ public class ShowImage extends HttpServlet {
      * @throws java.io.IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(
+            HttpServletRequest request,
+            HttpServletResponse response
+    )
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -72,7 +79,10 @@ public class ShowImage extends HttpServlet {
      * @throws java.io.IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(
+            HttpServletRequest request,
+            HttpServletResponse response
+    )
             throws ServletException, IOException {
         processRequest(request, response);
     }

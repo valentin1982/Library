@@ -19,7 +19,7 @@ import java.util.Map;
 @Scope("singleton")
 public class Utils implements Serializable {
 
-    private Map<String, SearchType> searchTypeList = new HashMap<String, SearchType>();
+    private Map<String, SearchType> searchTypeList = new HashMap<>();
 
     private String searchString;
 
@@ -30,8 +30,16 @@ public class Utils implements Serializable {
 
     public Map<String, SearchType> getSearchTypeList() {
         searchTypeList.clear();
-        searchTypeList.put(msg.getMessage("author_name", null, FacesContext.getCurrentInstance().getViewRoot().getLocale()), SearchType.AUTHOR);
-        searchTypeList.put(msg.getMessage("book_name", null, FacesContext.getCurrentInstance().getViewRoot().getLocale()), SearchType.TITLE);
+        searchTypeList.put(msg.getMessage("author_name", null,
+                FacesContext
+                        .getCurrentInstance()
+                        .getViewRoot()
+                        .getLocale()), SearchType.AUTHOR);
+        searchTypeList.put(msg.getMessage("book_name", null,
+                FacesContext
+                        .getCurrentInstance()
+                        .getViewRoot()
+                        .getLocale()), SearchType.TITLE);
         return searchTypeList;
     }
 

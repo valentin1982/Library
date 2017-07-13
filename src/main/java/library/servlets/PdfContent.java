@@ -29,7 +29,10 @@ public class PdfContent extends HttpServlet {
      * @throws javax.servlet.ServletException if a servlet-specific error occurs
      * @throws java.io.IOException            if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(
+            HttpServletRequest request,
+            HttpServletResponse response
+    )
             throws ServletException, IOException {
         response.setContentType("application/pdf; charset=UTF-8");
         OutputStream out = response.getOutputStream();
@@ -39,13 +42,19 @@ public class PdfContent extends HttpServlet {
             long id = Long.valueOf(request.getParameter("id"));
             Boolean save = Boolean.valueOf(request.getParameter("save"));
 
-            LibraryFacade libraryFacade = (LibraryFacade) getServletContext().getAttribute("libraryFacade");
+            LibraryFacade libraryFacade = (LibraryFacade) getServletContext()
+                    .getAttribute("libraryFacade");
 
             byte[] content = libraryFacade.getContent(id);
             response.setContentLength(content.length);
             if (save) {
                 String filename = request.getParameter("filename");
-                response.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(filename, "UTF-8") + ".pdf");
+                response.setHeader(
+                        "Content-Disposition",
+                        "attachment;filename=" +
+                                URLEncoder.encode(filename, "UTF-8") +
+                                ".pdf"
+                );
             }
             out.write(content);
         } catch (Exception ex) {
@@ -55,7 +64,7 @@ public class PdfContent extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
 
     /**
      * Handles the HTTP
@@ -67,7 +76,10 @@ public class PdfContent extends HttpServlet {
      * @throws java.io.IOException            if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(
+            HttpServletRequest request,
+            HttpServletResponse response
+    )
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -82,7 +94,10 @@ public class PdfContent extends HttpServlet {
      * @throws java.io.IOException            if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(
+            HttpServletRequest request,
+            HttpServletResponse response
+    )
             throws ServletException, IOException {
         processRequest(request, response);
     }
