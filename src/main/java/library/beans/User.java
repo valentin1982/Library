@@ -32,9 +32,9 @@ public class User implements Serializable {
     }
 
     public String getUsername() {
-        logger.trace(format2.format(date) );
+        logger.trace(format2.format(date));
         logger.debug(format2.format(date));
-        return username ;
+        return username;
     }
 
     public void setUsername(String username) {

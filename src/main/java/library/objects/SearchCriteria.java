@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Component
 @Scope("singleton")
-public class SearchCriteria implements Serializable{
+public class SearchCriteria implements Serializable {
 
     private String text;
 
