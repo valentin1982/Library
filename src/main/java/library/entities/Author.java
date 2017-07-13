@@ -14,7 +14,7 @@ public class Author {
     public Author() {
     }
 
-    public Author(String fio) {
+    public Author(final String fio) {
         this.fio = fio;
     }
 
@@ -22,7 +22,7 @@ public class Author {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(final long id) {
         this.id = id;
     }
 
@@ -30,7 +30,7 @@ public class Author {
         return fio;
     }
 
-    public void setFio(String fio) {
+    public void setFio(final String fio) {
         this.fio = fio;
     }
 
@@ -38,18 +38,26 @@ public class Author {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(final Date birthday) {
         this.birthday = birthday;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Author author = (Author) o;
 
-        if (id != author.id) return false;
+        if (id != author.id) {
+            return false;
+        }
+
         if (birthday != null ? !birthday.equals(author.birthday)
                 : author.birthday != null) return false;
         if (fio != null ? !fio.equals(author.fio)

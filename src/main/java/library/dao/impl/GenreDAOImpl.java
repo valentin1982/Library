@@ -29,7 +29,7 @@ public class GenreDAOImpl implements GenreDAO {
 
     @Transactional
     @Override
-    public Genre getGenres(Long id) {
+    public Genre getGenres(final Long id) {
 
         List<Genre> genres = sessionFactory
                 .getCurrentSession()
