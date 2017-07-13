@@ -47,7 +47,7 @@ public class BookDAOImpl implements BookDAO {
 
     @Transactional
     @Override
-    public List<Book> getBooks(Author author) {
+    public List<Book> getBooks(final Author author) {
         List<Book> books = createBookList(createBookCriteria()
                 .add(Restrictions
                         .ilike("author.fio",
@@ -57,7 +57,7 @@ public class BookDAOImpl implements BookDAO {
 
     @Transactional
     @Override
-    public List<Book> getBooks(String bookName) {
+    public List<Book> getBooks(final String bookName) {
         List<Book> books = createBookList(createBookCriteria()
                 .add(Restrictions
                         .ilike("b.name", bookName, MatchMode.ANYWHERE)));
@@ -66,7 +66,7 @@ public class BookDAOImpl implements BookDAO {
 
     @Transactional
     @Override
-    public List<Book> getBooks(Genre genre) {
+    public List<Book> getBooks(final Genre genre) {
         List<Book> books = createBookList(createBookCriteria().add(
                 Restrictions.eq("genre.id", genre.getId())));
         return books;
@@ -74,7 +74,7 @@ public class BookDAOImpl implements BookDAO {
 
     @Transactional
     @Override
-    public Object getFieldValue(Long id, String fieldName) {
+    public Object getFieldValue(final Long id, final String fieldName) {
         Criteria criteria = sessionFactory
                 .getCurrentSession()
                 .createCriteria(Book.class);
@@ -92,14 +92,14 @@ public class BookDAOImpl implements BookDAO {
     }
 
 
-    private void createAliases(DetachedCriteria criteria) {
+    private void createAliases(final DetachedCriteria criteria) {
         criteria.createAlias("b.author", "author");
         criteria.createAlias("b.genre", "genre");
         criteria.createAlias("b.publisher", "publisher");
     }
 
 
-    private List<Book> createBookList(DetachedCriteria bookListCriteria) {
+    private List<Book> createBookList(final DetachedCriteria bookListCriteria) {
         Criteria criteria = bookListCriteria
                 .getExecutableCriteria(sessionFactory.getCurrentSession());
         criteria.addOrder(Order.asc("b.name"))
