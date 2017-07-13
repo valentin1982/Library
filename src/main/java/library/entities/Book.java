@@ -35,11 +35,11 @@ public class Book implements java.io.Serializable {
     }
 
 
-    public Book(Long id, Author author, Genre genre,
-                Publisher publisher, String name,
-                byte[] content, Integer pageCount,
-                String isbn, Integer publishYear, byte[] image,
-                String descr, Integer rating, Long voteCount) {
+    public Book(final Long id, final Author author, final Genre genre,
+                final Publisher publisher, final String name,
+                final byte[] content, final Integer pageCount,
+                final String isbn, final Integer publishYear, final byte[] image,
+                final String descr, final Integer rating, final Long voteCount) {
 
         this.id = id;
         this.author = author;
@@ -60,7 +60,7 @@ public class Book implements java.io.Serializable {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 
@@ -68,7 +68,7 @@ public class Book implements java.io.Serializable {
         return this.author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(final Author author) {
         this.author = author;
     }
 
@@ -76,7 +76,7 @@ public class Book implements java.io.Serializable {
         return this.genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(final Genre genre) {
         this.genre = genre;
     }
 
@@ -84,7 +84,7 @@ public class Book implements java.io.Serializable {
         return this.publisher;
     }
 
-    public void setPublisher(Publisher publisher) {
+    public void setPublisher(final Publisher publisher) {
         this.publisher = publisher;
     }
 
@@ -92,7 +92,7 @@ public class Book implements java.io.Serializable {
         return this.name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -100,7 +100,7 @@ public class Book implements java.io.Serializable {
         return this.content;
     }
 
-    public void setContent(byte[] content) {
+    public void setContent(final byte[] content) {
         this.content = content;
     }
 
@@ -108,7 +108,7 @@ public class Book implements java.io.Serializable {
         return this.pageCount;
     }
 
-    public void setPageCount(Integer pageCount) {
+    public void setPageCount(final Integer pageCount) {
         this.pageCount = pageCount;
     }
 
@@ -116,7 +116,7 @@ public class Book implements java.io.Serializable {
         return this.isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(final String isbn) {
         this.isbn = isbn;
     }
 
@@ -124,7 +124,7 @@ public class Book implements java.io.Serializable {
         return this.publishYear;
     }
 
-    public void setPublishYear(Integer publishYear) {
+    public void setPublishYear(final Integer publishYear) {
         this.publishYear = publishYear;
     }
 
@@ -132,7 +132,7 @@ public class Book implements java.io.Serializable {
         return this.image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(final byte[] image) {
         this.image = image;
     }
 
@@ -140,7 +140,7 @@ public class Book implements java.io.Serializable {
         return this.descr;
     }
 
-    public void setDescr(String descr) {
+    public void setDescr(final String descr) {
         this.descr = descr;
     }
 
@@ -148,7 +148,7 @@ public class Book implements java.io.Serializable {
         return this.rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(final Integer rating) {
         this.rating = rating;
     }
 
@@ -156,12 +156,12 @@ public class Book implements java.io.Serializable {
         return this.voteCount;
     }
 
-    public void setVoteCount(Long voteCount) {
+    public void setVoteCount(final Long voteCount) {
         this.voteCount = voteCount;
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (!(o instanceof Book)) return false;
 
