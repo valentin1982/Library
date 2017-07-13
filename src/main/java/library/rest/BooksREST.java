@@ -34,7 +34,8 @@ public class BooksREST {
     @RequestMapping(value = "/books/author/{name}",
             method = RequestMethod.GET,
             headers = "Accept=application/json")
-    public List<Book> getBooksByAuthor(@PathVariable("name") final String name) {
+    public List<Book> getBooksByAuthor(@PathVariable("name")
+                                           final String name) {
         return bookDAO.getBooks(new Author(name));
     }
 
