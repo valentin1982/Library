@@ -20,23 +20,42 @@ public class User implements Serializable {
     private String username;
     private String password;
 
+    /**
+     * User constructor
+     */
     public User() {
     }
 
+    /**
+     * getPassword
+     * @return password
+     */
     public final String getPassword() {
         return password;
     }
 
+    /**
+     * set password
+     * @param password
+     */
     public final void setPassword(final String password) {
         this.password = password;
     }
 
+    /**
+     * get Username
+     * @return
+     */
     public final String getUsername() {
         logger.trace(format2.format(date));
         logger.debug(format2.format(date));
         return username;
     }
 
+    /**
+     * set Username
+     * @param username
+     */
     public final void setUsername(final String username) {
         this.username = username;
     }
