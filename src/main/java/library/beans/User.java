@@ -36,7 +36,7 @@ public class User implements Serializable {
 
     /**
      * set password
-     * @param password
+     * @param
      */
     public final void setPassword(final String password) {
         this.password = password;
@@ -44,7 +44,7 @@ public class User implements Serializable {
 
     /**
      * get Username
-     * @return
+     * @return username
      */
     public final String getUsername() {
         logger.trace(format2.format(date));
@@ -54,7 +54,7 @@ public class User implements Serializable {
 
     /**
      * set Username
-     * @param username
+     * @param
      */
     public final void setUsername(final String username) {
         this.username = username;
