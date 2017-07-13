@@ -51,9 +51,9 @@ public class PdfContent extends HttpServlet {
                 String filename = request.getParameter("filename");
                 response.setHeader(
                         "Content-Disposition",
-                        "attachment;filename=" +
-                                URLEncoder.encode(filename, "UTF-8") +
-                                ".pdf"
+                        "attachment;filename="
+                                + URLEncoder.encode(filename, "UTF-8")
+                                + ".pdf"
                 );
             }
             out.write(content);
