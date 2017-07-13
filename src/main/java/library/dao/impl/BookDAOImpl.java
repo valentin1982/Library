@@ -50,7 +50,8 @@ public class BookDAOImpl implements BookDAO {
     public List<Book> getBooks(Author author) {
         List<Book> books = createBookList(createBookCriteria()
                 .add(Restrictions
-                        .ilike("author.fio", author.getFio(), MatchMode.ANYWHERE)));
+                        .ilike("author.fio",
+                                author.getFio(), MatchMode.ANYWHERE)));
         return books;
     }
 
