@@ -17,27 +17,27 @@ public class User implements Serializable {
 
     private SimpleDateFormat format2 = new SimpleDateFormat("dd MM yyyy hh:mm");
 
-    String username;
-    String password;
+    private String username;
+    private String password;
 
     public User() {
     }
 
-    public String getPassword() {
+    public final String getPassword() {
         return password;
     }
 
-    public void setPassword(final String password) {
+    public final void setPassword(final String password) {
         this.password = password;
     }
 
-    public String getUsername() {
+    public final String getUsername() {
         logger.trace(format2.format(date));
         logger.debug(format2.format(date));
         return username;
     }
 
-    public void setUsername(final String username) {
+    public final void setUsername(final String username) {
         this.username = username;
     }
 }
