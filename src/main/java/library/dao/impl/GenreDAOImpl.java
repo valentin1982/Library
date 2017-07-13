@@ -21,14 +21,21 @@ public class GenreDAOImpl implements GenreDAO {
     @Override
     public List<Genre> getAll() {
 
-        return sessionFactory.getCurrentSession().createCriteria(Genre.class).list();
+        return sessionFactory
+                .getCurrentSession()
+                .createCriteria(Genre.class)
+                .list();
     }
 
     @Transactional
     @Override
     public Genre getGenres(Long id) {
 
-        List<Genre> genres = sessionFactory.getCurrentSession().createQuery("from Genre where id = ?").setParameter(0, id).list();
+        List<Genre> genres = sessionFactory
+                .getCurrentSession()
+                .createQuery("from Genre where id = ?")
+                .setParameter(0, id)
+                .list();
         return  genres.get(0);
     }
 

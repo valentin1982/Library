@@ -49,7 +49,8 @@ public class BookDAOImpl implements BookDAO {
     @Override
     public List<Book> getBooks(Author author) {
         List<Book> books = createBookList(createBookCriteria()
-                .add(Restrictions.ilike("author.fio", author.getFio(), MatchMode.ANYWHERE)));
+                .add(Restrictions
+                        .ilike("author.fio", author.getFio(), MatchMode.ANYWHERE)));
         return books;
     }
 
@@ -57,7 +58,8 @@ public class BookDAOImpl implements BookDAO {
     @Override
     public List<Book> getBooks(String bookName) {
         List<Book> books = createBookList(createBookCriteria()
-                .add(Restrictions.ilike("b.name", bookName, MatchMode.ANYWHERE)));
+                .add(Restrictions
+                        .ilike("b.name", bookName, MatchMode.ANYWHERE)));
         return books;
     }
 
