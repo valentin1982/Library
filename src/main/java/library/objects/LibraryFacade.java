@@ -49,6 +49,7 @@ public class LibraryFacade {
             case AUTHOR:
                 books = bookDAO.getBooks(new Author(searchCriteria.getText()));
                 break;
+                default:
         }
 
     }
