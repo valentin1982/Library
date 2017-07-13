@@ -30,7 +30,7 @@ public class LibraryFacade {
 
 
     public List<Book> getBooks() {
-        if (books == null){
+        if (books == null) {
             books = bookDAO.getBooks();
         }
         return books;
@@ -42,7 +42,7 @@ public class LibraryFacade {
 
     public void searchBooksByText() {
 
-        switch (searchCriteria.getSearchType()){
+        switch (searchCriteria.getSearchType()) {
             case TITLE:
                 books = bookDAO.getBooks(searchCriteria.getText());
                 break;
@@ -57,8 +57,8 @@ public class LibraryFacade {
         books = bookDAO.getBooks();
     }
 
-    public byte[] getContent(long id){
-        return (byte[])bookDAO.getFieldValue(id, FIELD_CONTENT);
+    public byte[] getContent(long id) {
+        return (byte[]) bookDAO.getFieldValue(id, FIELD_CONTENT);
     }
 
 
