@@ -15,7 +15,7 @@ public class User implements Serializable {
 
     private Date date = new Date();
 
-    private SimpleDateFormat format2 = new SimpleDateFormat("День dd Месяц MM Год yyyy Время hh:mm");
+    private SimpleDateFormat format2 = new SimpleDateFormat("dd MM yyyy hh:mm");
 
     String username;
     String password;

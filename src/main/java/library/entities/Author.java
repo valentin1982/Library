@@ -50,8 +50,10 @@ public class Author {
         Author author = (Author) o;
 
         if (id != author.id) return false;
-        if (birthday != null ? !birthday.equals(author.birthday) : author.birthday != null) return false;
-        if (fio != null ? !fio.equals(author.fio) : author.fio != null) return false;
+        if (birthday != null ? !birthday.equals(author.birthday)
+                : author.birthday != null) return false;
+        if (fio != null ? !fio.equals(author.fio)
+                : author.fio != null) return false;
 
         return true;
     }
