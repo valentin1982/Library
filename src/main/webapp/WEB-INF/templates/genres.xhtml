@@ -398,6 +398,33 @@
                             </ul>
                         </h:panelGrid>
                     </p:tab>
+                    <!--test-->
+                    <p:tab>
+                        <f:facet name="title">
+                            <h:outputText value=""/>
+                            <p:graphicImage  name="images/devops.jpg" alt="Continius integration"/>
+                        </f:facet>
+                        <h:panelGrid style="margin-left: -17px;" columns="1" cellpadding="10" >
+                            <!-- Раздел Continius integration-->
+                            <ul>
+                                <ui:repeat value="${genreDAOImpl.getGenres(62)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                                <ui:repeat value="${genreDAOImpl.getGenres(63)}" var="g">
+                                    <li>
+                                        <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                            <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                                        </p:commandButton>
+                                    </li>
+                                </ui:repeat>
+                            </ul>
+                        </h:panelGrid>
+                    </p:tab>
+                    <!--end test-->
                 </p:accordionPanel>
             </h:form>
         </div>
