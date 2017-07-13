@@ -157,8 +157,8 @@ public class Book implements java.io.Serializable {
         return this.voteCount;
     }
 
-    public void setVoteCount(final Long voteCount) {
-        this.voteCount = voteCount;
+    public void setVoteCount(final Long voteCounts) {
+        this.voteCount = voteCounts;
     }
 
     @Override
