@@ -35,7 +35,12 @@ public class Book implements java.io.Serializable {
     }
 
 
-    public Book(Long id, Author author, Genre genre, Publisher publisher, String name, byte[] content, Integer pageCount, String isbn, Integer publishYear, byte[] image, String descr, Integer rating, Long voteCount) {
+    public Book(Long id, Author author, Genre genre,
+                Publisher publisher, String name,
+                byte[] content, Integer pageCount,
+                String isbn, Integer publishYear, byte[] image,
+                String descr, Integer rating, Long voteCount) {
+
         this.id = id;
         this.author = author;
         this.genre = genre;
