@@ -1,6 +1,6 @@
 # Book Library
 
-To see an example, follow the link
+To see an example, follow the link 
 
 https://libraryit.ddns.net:8181/libraryIT/app/login
 
@@ -10,8 +10,8 @@ password: user12345888
 
 Used technologies : 
     
-    JSF, AJAX, PrimeFaces, Facelets, Hibernate, 
-    SQL, OmniFaces, J2EE Security, HTML, CSS, Spring MVC,
+    JSF, AJAX, PrimeFaces, Facelets, Hibernate, SQL, 
+    OmniFaces, J2EE Security, HTML, CSS, Spring MVC,
     Spring security, XHTML.
 
 
